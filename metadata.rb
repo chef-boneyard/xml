@@ -7,6 +7,6 @@ version          "1.0.4"
 
 recipe "xml", "Installs libxml development packages"
 
-%w{ centos redhat scientific suse fedora amazon ubuntu debian freebsd }.each do |os|
+%w{ centos redhat scientific suse fedora amazon ubuntu debian freebsd arch }.each do |os|
   supports os
 end
