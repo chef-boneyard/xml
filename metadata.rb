@@ -11,3 +11,4 @@ recipe "xml", "Installs libxml development packages"
 %w{ centos redhat scientific suse fedora amazon ubuntu debian freebsd arch }.each do |os|
   supports os
 end
+depends "build-essential"
