@@ -18,7 +18,8 @@
 #
 
 node['xml']['packages'].each do |pkg|
-  package pkg do
-    action :install
+  r = package pkg do
+    action( node['xml']['compiletime'] ? :nothing : :install)
   end
+  r.run_action(:install) if node['xml']['compiletime']
 end
