@@ -21,6 +21,12 @@ Recipes
 
 Installs the development packages for libxml2 and libxslt.
 
+For installing the packages during compile time:
+```ruby
+node.set['xml']['compiletime'] = true
+include_recipe 'xml::default'
+```
+
 ## ruby
 
 Installs the nokogiri gem into Chef's Ruby environment so it can be
