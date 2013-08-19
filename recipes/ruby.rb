@@ -19,10 +19,17 @@
 # limitations under the License.
 #
 
-execute 'apt-get update' do
-  ignore_failure true
+apt = execute "apt-get update" do
   action :nothing
-end.run_action(:run) if 'debian' == node['platform_family']
+end
+
+if 'debian' == node['platform_family']
+  if !File.exists?('/var/lib/apt/periodic/update-success-stamp')
+    apt.run_action(:run)
+  elsif File.mtime('/var/lib/apt/periodic/update-success-stamp') < Time.now - 86400
+    apt.run_action(:run)
+  end
+end
 
 node.set['build_essential']['compiletime'] = true
 include_recipe "build-essential"
