@@ -25,11 +25,8 @@ execute 'apt-get update' do
 end.run_action(:run) if 'debian' == node['platform_family']
 
 node.set['build_essential']['compiletime'] = true
+node.set['xml']['compiletime'] = true
 include_recipe "build-essential"
 include_recipe 'xml::default'
-
-node['xml']['packages'].each do |xml_pack|
-  resources("package[#{xml_pack}]").run_action(:install)
-end
 
 chef_gem 'nokogiri'
