@@ -3,6 +3,12 @@ xml Cookbook CHANGELOG
 This file is used to list changes made in each version of the xml cookbook.
 
 
+v1.2.0
+------
+### Improvement
+- **[COOK-3462](https://tickets.opscode.com/browse/COOK-3462)** - Allow installing packages during compile time
+
+
 v1.1.2
 ------
 - [COOK-2059] - missing dependency on build-essential
