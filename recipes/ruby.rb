@@ -4,7 +4,7 @@
 #
 # Author:: Joseph Holsten (<joseph@josephholsten.com>)
 #
-# Copyright 2008-2012, Opscode, Inc.
+# Copyright 2008-2013, Opscode, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -32,11 +32,8 @@ if 'debian' == node['platform_family']
 end
 
 node.set['build_essential']['compiletime'] = true
-include_recipe "build-essential"
+node.set['xml']['compiletime'] = true
+include_recipe 'build-essential::default'
 include_recipe 'xml::default'
-
-node['xml']['packages'].each do |xml_pack|
-  resources("package[#{xml_pack}]").run_action(:install)
-end
 
 chef_gem 'nokogiri'

@@ -1,14 +1,22 @@
-name             "xml"
-maintainer       "Opscode, Inc."
-maintainer_email "cookbooks@opscode.com"
-license          "Apache 2.0"
-description      "Installs xml"
+name             'xml'
+maintainer       'Opscode, Inc.'
+maintainer_email 'cookbooks@opscode.com'
+license          'Apache 2.0'
+description      'Installs xml'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "1.1.2"
+version          '1.2.1'
 
-recipe "xml", "Installs libxml development packages"
+depends 'build-essential'
 
-%w{ centos redhat scientific suse fedora amazon ubuntu debian freebsd arch }.each do |os|
-  supports os
-end
-depends "build-essential"
+supports 'amazon'
+supports 'arch'
+supports 'centos'
+supports 'debian'
+supports 'fedora'
+supports 'freebsd'
+supports 'redhat'
+supports 'scientific'
+supports 'suse'
+supports 'ubuntu'
+
+recipe 'xml', 'Installs libxml development packages'
