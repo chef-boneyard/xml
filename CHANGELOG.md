@@ -2,6 +2,11 @@ xml Cookbook CHANGELOG
 =======================
 This file is used to list changes made in each version of the xml cookbook.
 
+v1.2.1
+------
+### Improvement
+- [COOK-4304](https://tickets.opscode.com/browse/COOK-4304) - Now sets proper packages for SUSE 11
+
 
 v1.2.0
 ------
