@@ -2,6 +2,12 @@ xml Cookbook CHANGELOG
 =======================
 This file is used to list changes made in each version of the xml cookbook.
 
+v1.2.2 (2014-02-27)
+-------------------
+[COOK-4382] - Fix xml cookbook spec test
+[COOK-4304] - Set proper packages for SUSE 11
+
+
 v1.2.1
 ------
 ### Improvement
