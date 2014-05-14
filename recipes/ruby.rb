@@ -32,4 +32,6 @@ include_recipe 'xml::default'
 # See https://github.com/sparklemotion/nokogiri/blob/master/CHANGELOG.rdoc#160rc1--2013-04-14
 ENV['NOKOGIRI_USE_SYSTEM_LIBRARIES'] = node['xml']['nokogiri']['use_system_libraries'].to_s
 
-chef_gem 'nokogiri'
+chef_gem 'nokogiri' do
+  version '1.6.2.1'
+end
