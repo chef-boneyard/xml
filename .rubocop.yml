@@ -1,6 +1,6 @@
 AllCops:
-  Excludes:
-    - vendor/**
+  Exclude:
+    - vendor/**/*
 
 AlignParameters:
   Enabled: false
@@ -12,3 +12,8 @@ LineLength:
   Enabled: false
 MethodLength:
   Max: 30
+#
+# we like our neatly-aligned code too much
+#
+SingleSpaceBeforeFirstArg:
+  Enabled: false
