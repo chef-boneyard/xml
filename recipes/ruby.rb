@@ -30,6 +30,9 @@ include_recipe 'build-essential::default'
 include_recipe 'xml::default'
 
 # See https://github.com/sparklemotion/nokogiri/blob/master/CHANGELOG.rdoc#160rc1--2013-04-14
-ENV['NOKOGIRI_USE_SYSTEM_LIBRARIES'] = node['xml']['nokogiri']['use_system_libraries'].to_s
+sys_libs = node['xml']['nokogiri']['use_system_libraries']
+ENV['NOKOGIRI_USE_SYSTEM_LIBRARIES'] = sys_libs.to_s if sys_libs
 
-chef_gem 'nokogiri'
+chef_gem 'nokogiri' do
+  version node['xml']['nokogiri']['version']
+end

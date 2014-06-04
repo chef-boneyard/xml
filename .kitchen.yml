@@ -15,3 +15,10 @@ suites:
   - name: ruby
     run_list:
       - recipe[xml::ruby]
+  - name: no-sys-libs
+    run_list:
+      - recipe[xml::ruby]
+    attributes:
+      xml:
+        nokogiri:
+          use_system_libraries: false

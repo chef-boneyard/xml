@@ -29,3 +29,7 @@ when 'freebsd', 'arch'
 end
 
 default['xml']['nokogiri']['use_system_libraries'] = true
+
+# Newest versions will not compile with system libraries
+# https://github.com/sparklemotion/nokogiri/issues/1099
+default['xml']['nokogiri']['version'] = '1.6.1'
