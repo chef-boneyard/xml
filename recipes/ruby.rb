@@ -31,20 +31,13 @@ node.set['xml']['compiletime'] = true
 include_recipe 'build-essential::default'
 include_recipe 'xml::default'
 
-if platform?('ubuntu')
-  if node['xml']['nokogiri']['use_system_libraries'] &&
-          !node['xml']['nokogiri']['version'].nil? &&
-          version(node['xml']['nokogiri']['version']).satisfies?('<= 1.6.1')
-    # See https://github.com/sparklemotion/nokogiri/blob/master/CHANGELOG.rdoc#160rc1--2013-04-14
+if node['xml']['nokogiri']['use_system_libraries']
+  if node['xml']['nokogiri']['version'].nil? ||
+     version(node['xml']['nokogiri']['version']).satisfies?('> 1.6.1')
+    Chef::Application.fatal!("You must specify a version less than or equal to 1.6.1 of nokogiri to use system libraries. You set: #{node['xml']['nokogiri']['version']}.")
+  else
     ENV['NOKOGIRI_USE_SYSTEM_LIBRARIES'] = node['xml']['nokogiri']['use_system_libraries'].to_s
-  elsif node['xml']['nokogiri']['use_system_libraries'] &&
-          (node['xml']['nokogiri']['version'].nil? ||
-          version(node['xml']['nokogiri']['version']).satisfies?('> 1.6.1'))
-    Chef::Application.fatal!("You must specify a version less than or equal to 1.6.1 of nokogiri to use system libraries.
-                     You set: #{node['xml']['nokogiri']['version']}.")
   end
-else
-  ENV['NOKOGIRI_USE_SYSTEM_LIBRARIES'] = node['xml']['nokogiri']['use_system_libraries'].to_s
 end
 
 chef_gem 'nokogiri' do
