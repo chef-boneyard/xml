@@ -7,6 +7,7 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '1.2.5'
 
 depends 'build-essential'
+depends 'chef-sugar'
 
 supports 'amazon'
 supports 'arch'
