@@ -1,0 +1,30 @@
+---
+driver_config:
+  digitalocean_client_id: <%= ENV['DIGITAL_OCEAN_CLIENT_ID'] %>
+  digitalocean_api_key: <%= ENV['DIGITAL_OCEAN_API_KEY'] %>
+
+provisioner:
+  name: chef_zero
+  require_chef_omnibus: latest
+
+platforms:
+- name: ubuntu-12.04
+  driver_plugin: digital_ocean
+  driver_config:
+    region: <%= ENV['DIGITAL_OCEAN_REGION'] %>
+  run_list:
+  - recipe[apt]
+
+- name: ubuntu-14.04
+  driver_plugin: digital_ocean
+  driver_config:
+    region: <%= ENV['DIGITAL_OCEAN_REGION'] %>
+  run_list:
+  - recipe[apt]
+
+- name: centos-6.5
+  driver_plugin: digital_ocean
+  driver_config:
+    region: <%= ENV['DIGITAL_OCEAN_REGION'] %>
+
+<%= {"suites" => YAML.load_file('.kitchen.yml')['suites']}.to_yaml.gsub(/---\n/, '') %>
