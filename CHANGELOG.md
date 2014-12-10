@@ -1,3 +1,7 @@
+v1.2.9 (2014-12-10)
+-------------------
+- Re-release with stove 3.2.2 to get a metadata.rb
+
 v1.2.8 (2014-12-09)
 -------------------
 - [#11] Fix warning message from build-essential
