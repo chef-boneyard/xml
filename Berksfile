@@ -1,4 +1,4 @@
-site :opscode
+site :chef
 metadata
 
 group :integration do

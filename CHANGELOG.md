@@ -27,13 +27,13 @@ v1.2.2 (2014-02-27)
 v1.2.1
 ------
 ### Improvement
-- [COOK-4304](https://tickets.opscode.com/browse/COOK-4304) - Now sets proper packages for SUSE 11
+- [COOK-4304](https://tickets.chef.io/browse/COOK-4304) - Now sets proper packages for SUSE 11
 
 
 v1.2.0
 ------
 ### Improvement
-- **[COOK-3462](https://tickets.opscode.com/browse/COOK-3462)** - Allow installing packages during compile time
+- **[COOK-3462](https://tickets.chef.io/browse/COOK-3462)** - Allow installing packages during compile time
 
 
 v1.1.2
