@@ -41,5 +41,7 @@ if node['xml']['nokogiri']['use_system_libraries']
 end
 
 chef_gem 'nokogiri' do
+  compile_time true
   version node['xml']['nokogiri']['version']
+  action :install
 end
