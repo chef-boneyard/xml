@@ -1,3 +1,8 @@
+v1.2.10 (2014-02-17)
+--------------------
+- Being explicit about usage of the chef_gem's compile_time property.
+- Eliminating future deprecation warnings in Chef 12.1.0.
+
 v1.2.9 (2014-12-10)
 -------------------
 - Re-release with stove 3.2.2 to get a metadata.rb
