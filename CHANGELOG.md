@@ -1,3 +1,7 @@
+v1.2.13 (2014-02-18)
+--------------------
+- Reverting compile_time work
+
 v1.2.12 (2014-02-18)
 --------------------
 - Fixing last patch to play nicely with Chef Sugar
