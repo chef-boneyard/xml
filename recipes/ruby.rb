@@ -41,7 +41,6 @@ if node['xml']['nokogiri']['use_system_libraries']
 end
 
 chef_gem 'nokogiri' do
-  compile_time true if Chef::Resource::ChefGem.method_defined?(:compile_time)
   version node['xml']['nokogiri']['version']
   action :install
 end
