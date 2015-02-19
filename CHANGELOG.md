@@ -1,3 +1,7 @@
+v1.2.12 (2014-02-18)
+--------------------
+- Fixing last patch to play nicely with Chef Sugar
+
 v1.2.11 (2014-02-18)
 --------------------
 - Fixing chef_gem for Chef below 12.1.0
