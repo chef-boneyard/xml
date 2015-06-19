@@ -26,7 +26,6 @@ execute 'apt-get update' do
   action :nothing
 end.run_action(:run) if 'debian' == node['platform_family']
 
-node.default['build-essential']['compile_time'] = true
 node.default['xml']['compiletime'] = true
 include_recipe 'build-essential::default'
 include_recipe 'xml::default'
