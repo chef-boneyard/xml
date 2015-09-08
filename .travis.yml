@@ -8,5 +8,5 @@ rvm:
   - 2.2
 script:
   - bundle exec foodcritic -f any .
-  - bundle exec rspec --color --format progress
   - bundle exec rubocop
+  - bundle exec rspec --color --format progress
