@@ -1,6 +1,7 @@
 XML Cookbook
 ============
-[![Build Status](https://secure.travis-ci.org/chef-cookbooks/xml.png?branch=master)](http://travis-ci.org/chef-cookbooks/xml)
+[![Build Status](https://travis-ci.org/chef-cookbooks/xml.svg?branch=master)](http://travis-ci.org/chef-cookbooks/xml)
+[![Cookbook Version](https://img.shields.io/cookbook/v/xml.svg)](https://supermarket.chef.io/cookbooks/xml)
 
 Installs development package for libxml.
 
@@ -36,7 +37,7 @@ License & Authors
 - Author:: Joshua Timberman (<joshua@chef.io>)
 
 ```text
-Copyright 2009-2013, Chef Software, Inc.
+Copyright 2009-2015, Chef Software, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
