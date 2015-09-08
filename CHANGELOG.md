@@ -1,3 +1,7 @@
+xml Cookbook CHANGELOG
+======================
+This file is used to list changes made in each version of the xml cookbook.
+
 v1.2.13 (2014-02-18)
 --------------------
 - Reverting compile_time work
