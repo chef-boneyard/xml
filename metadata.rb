@@ -9,15 +9,11 @@ version          '1.2.13'
 depends 'build-essential'
 depends 'chef-sugar'
 
-supports 'amazon'
-supports 'arch'
-supports 'centos'
-supports 'debian'
-supports 'fedora'
-supports 'freebsd'
-supports 'redhat'
-supports 'scientific'
-supports 'suse'
-supports 'ubuntu'
+%w(amazon arch centos centos fedora freebsd oracle redhat scientific suse ubuntu).each do |os|
+  supports os
+end
 
 recipe 'xml', 'Installs libxml development packages'
+
+source_url 'https://github.com/chef-cookbooks/xml' if respond_to?(:source_url)
+issues_url 'https://github.com/chef-cookbooks/xml/issues' if respond_to?(:issues_url)
