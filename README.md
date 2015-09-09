@@ -1,7 +1,7 @@
 XML Cookbook
 ============
 [![Build Status](https://travis-ci.org/chef-cookbooks/xml.svg?branch=master)](http://travis-ci.org/chef-cookbooks/xml)
-[![Cookbook Version](https://img.shields.io/cookbook/v/xml.svg)](https://supermarket.chef.io/cookbooks/xml)
+[![Cookbook Version](http://img.shields.io/cookbook/v/xml.svg)](https://supermarket.chef.io/cookbooks/xml)
 
 Installs development package for libxml.
 
