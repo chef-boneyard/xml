@@ -9,7 +9,7 @@ version          '1.2.13'
 depends 'build-essential'
 depends 'chef-sugar'
 
-%w(amazon arch centos fedora freebsd oracle redhat scientific suse ubuntu).each do |os|
+%w(amazon arch centos debian fedora freebsd oracle redhat scientific suse ubuntu).each do |os|
   supports os
 end
 
