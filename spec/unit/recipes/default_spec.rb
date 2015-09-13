@@ -6,5 +6,6 @@ describe 'xml::default' do
   it 'installs the XML package' do
     expect(chef_run).to install_package('libxml2-dev')
     expect(chef_run).to install_package('libxslt-dev')
+    expect(chef_run).to install_package('zlib1g-dev')
   end
 end

@@ -23,7 +23,7 @@ case node['platform_family']
 when 'rhel', 'fedora', 'suse'
   default['xml']['packages'] = %w(libxml2-devel libxslt-devel)
 when 'ubuntu', 'debian'
-  default['xml']['packages'] = %w(libxml2-dev libxslt-dev)
+  default['xml']['packages'] = %w(libxml2-dev libxslt-dev zlib1g-dev)
 when 'freebsd', 'arch'
   default['xml']['packages'] = %w(libxml2 libxslt)
 end
