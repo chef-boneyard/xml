@@ -26,7 +26,7 @@ Requirements
 Attributes
 ----------
 - `node['xml']['packages']` - Array of package names that should be installed
-- `node['xml']['nokogiri']['use_system_libraries']` - Whether to use system libraries for nokogiri (defaults to `true`)
+- `node['xml']['nokogiri']['use_system_libraries']` - Whether to use system libraries for nokogiri (defaults to `false`)
 
 
 Recipes
