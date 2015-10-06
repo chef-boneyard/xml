@@ -2,6 +2,25 @@ xml Cookbook CHANGELOG
 ======================
 This file is used to list changes made in each version of the xml cookbook.
 
+v1.3.0 (2015-10-06)
+--------------------
+- Added zlib1g-dev on Ubuntu / Debian to fix compiles
+- Add support for OS X
+- Add source_url and issues_url to metadata.rb for Supermarket
+- Update Chefspec tests to 4.X format
+- Add additional platforms to the Kitchen CI config
+- Use the standard Rubocop config and resolve all warnings
+- Add Ruby 2.1/2.2 to Travis and remove Ruby 1.9.3
+- Update Berksfile to 3.X format
+- Update contributing and testing docs
+- Update and expand testing dependencies in the Gemfile
+- Add maintainers.md and maintainers.toml files
+- Add cookbook version badge to the readme
+- Add Chef and platform requirements to the readme
+- Add Rakfile for simplified testing
+- Remove yum and build-essential from the Berksfile since these didn't need to be there
+- Update .gitignore and add chefignore to prevent extra files from being uploaded to the Chef server
+
 v1.2.13 (2014-02-18)
 --------------------
 - Reverting compile_time work
