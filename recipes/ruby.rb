@@ -43,4 +43,5 @@ end
 chef_gem 'nokogiri' do
   version node['xml']['nokogiri']['version']
   action :install
+  compile_time true if respond_to?('compile_time')
 end
