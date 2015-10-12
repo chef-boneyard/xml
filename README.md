@@ -16,7 +16,7 @@ Requirements
 - FreeBSD
 
 #### Chef
-- Chef 11+
+- Chef 12+ (use 1.2 for Chef 11)
 
 #### Cookbooks
 - build-essential
