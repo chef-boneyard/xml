@@ -28,6 +28,8 @@ when 'freebsd', 'arch'
   default['xml']['packages'] = %w(libxml2 libxslt)
 when 'mac_os_x'
   default['xml']['packages'] = %w(libxml2)
+else
+  default['xml']['packages'] = []
 end
 
 default['xml']['nokogiri']['use_system_libraries'] = false
