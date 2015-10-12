@@ -2,6 +2,11 @@ xml Cookbook CHANGELOG
 ======================
 This file is used to list changes made in each version of the xml cookbook.
 
+v1.3.1 (2015-10-12)
+-------------------
+- Fixed compile errors on Chef 11
+- Added an empty array of packages for unknown systems to prevent failures on Windows and other operating systems
+
 v1.3.0 (2015-10-06)
 --------------------
 - Added zlib1g-dev on Ubuntu / Debian to fix compiles
