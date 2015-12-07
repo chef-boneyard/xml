@@ -19,11 +19,6 @@ describe 'xml::ruby' do
     expect(chef_run).to include_recipe 'xml::default'
   end
 
-  it 'defaults the NOKOGIRI_USE_SYSTEM_LIBRARIES env variable' do
-    chef_run
-    expect(ENV['NOKOGIRI_USE_SYSTEM_LIBRARIES']).to eq('true')
-  end
-
   it 'installs nokogiri' do
     expect(chef_run).to install_chef_gem('nokogiri')
   end
