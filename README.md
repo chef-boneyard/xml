@@ -34,7 +34,7 @@ include_recipe 'xml::default'
 ```
 
 ### ruby
-Installs the nokogiri gem into Chef's Ruby environment so it can be used in recipes.
+Installs the nokogiri gem into Chef's Ruby environment so it can be used in recipes. If nokogiri is being installed using the system's libxml package your distro must include version 2.6.21 or later.  Due to this Debian 7 or earlier / Ubuntu 12.04 or earlier will not work with the system library attribute enabled.
 
 ## License & Authors
 **Author:** Cookbook Engineering Team ([cookbooks@chef.io](mailto:cookbooks@chef.io))

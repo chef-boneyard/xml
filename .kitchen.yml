@@ -33,4 +33,6 @@ suites:
       xml:
         nokogiri:
           use_system_libraries: true
-          version: "1.6.1"
+    excludes:
+      - debian-7.8
+      - ubuntu-12.04
