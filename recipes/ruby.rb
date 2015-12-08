@@ -18,10 +18,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-node.default['build-essential']['compile_time'] = true
-node.default['xml']['compiletime'] = true
 
 include_recipe 'chef-sugar'
+
+execute 'apt-get update' do
+  ignore_failure true
+  action :nothing
+end.run_action(:run) if 'debian' == node['platform_family']
+
+node.default['build-essential']['compile_time'] = true
+node.default['xml']['compiletime'] = true
 include_recipe 'build-essential::default'
 include_recipe 'xml::default'
 
