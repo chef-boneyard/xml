@@ -39,4 +39,15 @@ chef_gem 'nokogiri' do
   version node['xml']['nokogiri']['version'] if node['xml']['nokogiri']['version']
   action :install
   compile_time true if defined? compile_time
+  ignore_failure true
+end
+
+ruby_block "Debug" do
+    only_if { ::File.exists?('/opt/chef/embedded/lib/ruby/gems/2.1.0/extensions/x86_64-linux/2.1.0/nokogiri-1.6.7/mkmf.log') }
+    block do
+        print "\n"
+        File.open('/opt/chef/embedded/lib/ruby/gems/2.1.0/extensions/x86_64-linux/2.1.0/nokogiri-1.6.7/mkmf.log').each do |line|
+            print line
+        end
+    end
 end
