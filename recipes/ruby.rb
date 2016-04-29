@@ -4,7 +4,7 @@
 #
 # Author:: Joseph Holsten (<joseph@josephholsten.com>)
 #
-# Copyright 2008-2015, Chef Software, Inc.
+# Copyright 2008-2016, Chef Software, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -38,5 +38,5 @@ end
 chef_gem 'nokogiri' do
   version node['xml']['nokogiri']['version'] if node['xml']['nokogiri']['version']
   action :install
-  compile_time true if defined? compile_time
+  compile_time true if Chef::Resource::ChefGem.method_defined?(:compile_time)
 end
