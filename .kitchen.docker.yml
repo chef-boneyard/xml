@@ -15,14 +15,29 @@ verifier:
   sudo: false
 
 platforms:
+- name: debian-7
+  driver:
+    image: debian:7
+    pid_one_command: /sbin/init
+    intermediate_instructions:
+      - RUN /usr/bin/apt-get update
+      - RUN /usr/bin/apt-get install apt-transport-https net-tools -y
+
 - name: debian-8
   driver:
     image: debian:8
     pid_one_command: /bin/systemd
+    intermediate_instructions:
+      - RUN /usr/bin/apt-get update
+      - RUN /usr/bin/apt-get install apt-transport-https net-tools -y
 
 - name: centos-5
   driver:
     image: centos:5
+    platform: rhel
+    run_command: /sbin/init
+    provision_command:
+      - /usr/bin/yum install -y initscripts net-tools wget
 
 - name: centos-6
   driver:
@@ -50,11 +65,9 @@ platforms:
 - name: fedora-23
   driver:
     image: fedora:23
-    intermediate_instructions:
-    - RUN yum clean all
     pid_one_command: /usr/lib/systemd/systemd
     intermediate_instructions:
-      - RUN yum -y install tar
+      - RUN dnf -y install tar yum
 
 - name: ubuntu-12.04
   driver:
@@ -74,7 +87,7 @@ platforms:
 
 - name: ubuntu-16.04
   driver:
-    image: ubuntu:15.04
+    image: ubuntu:16.04
     pid_one_command: /bin/systemd
     intermediate_instructions:
       - RUN /usr/bin/apt-get update
