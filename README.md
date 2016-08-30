@@ -29,7 +29,7 @@ Installs the development packages for libxml2 and libxslt.
 For installing the packages during compile time:
 
 ```ruby
-node.set['xml']['compiletime'] = true
+node.normal['xml']['compiletime'] = true
 include_recipe 'xml::default'
 ```
 
