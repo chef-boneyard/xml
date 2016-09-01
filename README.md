@@ -39,7 +39,7 @@ Installs the nokogiri gem into Chef's Ruby environment so it can be used in reci
 ## License & Authors
 **Author:** Cookbook Engineering Team ([cookbooks@chef.io](mailto:cookbooks@chef.io))
 
-**Copyright:** 2009-2015, Chef Software, Inc.
+**Copyright:** 2009-2016, Chef Software, Inc.
 
 ```
 Licensed under the Apache License, Version 2.0 (the "License");
