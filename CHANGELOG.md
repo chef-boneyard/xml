@@ -1,6 +1,12 @@
 # xml Cookbook CHANGELOG
 This file is used to list changes made in each version of the xml cookbook.
 
+## 3.0.0 (2016-09-07)
+- Make sure to install zlib-devel on RHEL
+- Testing updates
+- Require Chef 12.1 and use multipackage to speed up installs
+- Don't use chef-sugar since it wasn't necessary
+
 ## v2.0.0 (2015-12-07)
 - The 1.3.1 release pinned the nokogiri gem version to 1.6.2.1 to avoid compilation failure that occured at some point in time. The cookbook also prevented the user from setting the version attribute to a modern nokogiri release. Nokogiri no longer fails to install so there is no longer a reason to pin or gate the versions. This release removes the version attribute and instead installs the latest version, but still allows the user to set the version attribute to pin to a specific version. 
 
