@@ -2,7 +2,7 @@
 # Cookbook Name:: xml
 # Recipe:: default
 #
-# Copyright 2010-2015, Chef Software, Inc.
+# Copyright 2010-2016, Chef Software, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,9 +17,7 @@
 # limitations under the License.
 #
 
-node['xml']['packages'].each do |pkg|
-  r = package pkg do
-    action(node['xml']['compiletime'] ? :nothing : :install)
-  end
-  r.run_action(:install) if node['xml']['compiletime']
+r = package node['xml']['packages'] do
+  action(node['xml']['compiletime'] ? :nothing : :install)
 end
+r.run_action(:install) if node['xml']['compiletime']

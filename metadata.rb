@@ -15,5 +15,7 @@ end
 
 recipe 'xml', 'Installs libxml development packages'
 
-source_url 'https://github.com/chef-cookbooks/xml' if respond_to?(:source_url)
-issues_url 'https://github.com/chef-cookbooks/xml/issues' if respond_to?(:issues_url)
+source_url 'https://github.com/chef-cookbooks/xml'
+issues_url 'https://github.com/chef-cookbooks/xml/issues'
+
+chef_version '>= 12.1'
