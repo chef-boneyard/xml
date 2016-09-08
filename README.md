@@ -12,7 +12,7 @@ Installs development package for libxml.
 - FreeBSD
 
 ### Chef
-- Chef 11+
+- Chef 12.1+
 
 ### Cookbooks
 - build-essential
