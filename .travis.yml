@@ -24,14 +24,23 @@ env:
   - INSTANCE=default-ubuntu-1204
   - INSTANCE=default-centos-6
   - INSTANCE=default-centos-7
+  - INSTANCE=default-fedora-latest
+  - INSTANCE=default-opensuse-132
+  - INSTANCE=default-opensuse-421
   - INSTANCE=ruby-ubuntu-1404
   - INSTANCE=ruby-ubuntu-1204
   - INSTANCE=ruby-centos-6
   - INSTANCE=ruby-centos-7
+  - INSTANCE=ruby-fedora-latest
+  - INSTANCE=ruby-opensuse-132
+  - INSTANCE=ruby-opensuse-421
   - INSTANCE=ruby-syslibs-ubuntu-1404
   - INSTANCE=ruby-syslibs-ubuntu-1204
   - INSTANCE=ruby-syslibs-centos-6
   - INSTANCE=ruby-syslibs-centos-7
+  - INSTANCE=ruby-syslibs-fedora-latest
+  - INSTANCE=ruby-syslibs-opensuse-132
+  - INSTANCE=ruby-syslibs-opensuse-421
 
 before_script:
   - sudo iptables -L DOCKER || ( echo "DOCKER iptables chain missing" ; sudo iptables -N DOCKER )
