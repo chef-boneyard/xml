@@ -19,8 +19,6 @@
 # limitations under the License.
 #
 
-include_recipe 'chef-sugar'
-
 execute 'apt-get update' do
   ignore_failure true
   action :nothing

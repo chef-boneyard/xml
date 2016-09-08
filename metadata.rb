@@ -7,7 +7,6 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '2.0.0'
 
 depends 'build-essential'
-depends 'chef-sugar'
 
 %w(amazon arch centos debian fedora freebsd oracle redhat scientific suse ubuntu).each do |os|
   supports os
