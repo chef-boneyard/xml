@@ -17,7 +17,11 @@
 # limitations under the License.
 #
 
-r = package node['xml']['packages'] do
-  action(node['xml']['compiletime'] ? :nothing : :install)
+if node['xml']['packages'].empty?
+  Chef::Log.warn("No XML packages defined for installation in node['xml']['packages'] for your platform.")
+else
+  r = package node['xml']['packages'] do
+    action(node['xml']['compiletime'] ? :nothing : :install)
+  end
+  r.run_action(:install) if node['xml']['compiletime']
 end
-r.run_action(:install) if node['xml']['compiletime']
