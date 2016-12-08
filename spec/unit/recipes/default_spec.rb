@@ -53,7 +53,7 @@ describe 'xml::default' do
     let(:chef_run) { ChefSpec::ServerRunner.new(platform: 'freebsd', version: '10.3').converge(described_recipe) }
 
     it 'installs the XML packages during the converge phase' do
-      expect(chef_run).to install_package(['libxml2', 'libxslt']).at_converge_time
+      expect(chef_run).to install_package(%w(libxml2 libxslt)).at_converge_time
     end
   end
 
