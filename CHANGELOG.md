@@ -1,20 +1,32 @@
 # xml Cookbook CHANGELOG
 This file is used to list changes made in each version of the xml cookbook.
 
+## 3.1.0 (2016-12-07)
+
+- Move the build essential compile time setting to attributes file
+- Remove the Chef 11 compatibility check in chef_gem
+- Remove support for Arch since it’s not a supported Chef platform
+- If no packages are defined log a warning instead of failing hard
+- Add specs for all supported platforms and windows
+
 ## 3.0.0 (2016-09-07)
+
 - Make sure to install zlib-devel on RHEL
 - Testing updates
 - Require Chef 12.1 and use multipackage to speed up installs
 - Don't use chef-sugar since it wasn't necessary
 
 ## v2.0.0 (2015-12-07)
+
 - The 1.3.1 release pinned the nokogiri gem version to 1.6.2.1 to avoid compilation failure that occured at some point in time. The cookbook also prevented the user from setting the version attribute to a modern nokogiri release. Nokogiri no longer fails to install so there is no longer a reason to pin or gate the versions. This release removes the version attribute and instead installs the latest version, but still allows the user to set the version attribute to pin to a specific version. 
 
 ## v1.3.1 (2015-10-12)
+
 - Fixed compile errors on Chef 11
 - Added an empty array of packages for unknown systems to prevent failures on Windows and other operating systems
 
 ## v1.3.0 (2015-10-06)
+
 - Added zlib1g-dev on Ubuntu / Debian to fix compiles
 - Add support for OS X
 - Add source_url and issues_url to metadata.rb for Supermarket
