@@ -24,7 +24,7 @@ when 'rhel', 'fedora', 'suse'
   default['xml']['packages'] = %w(libxml2-devel libxslt-devel zlib-devel)
 when 'debian'
   default['xml']['packages'] = %w(libxml2-dev libxslt-dev zlib1g-dev)
-when 'freebsd', 'arch'
+when 'freebsd'
   default['xml']['packages'] = %w(libxml2 libxslt)
 when 'mac_os_x'
   default['xml']['packages'] = %w(libxml2)
