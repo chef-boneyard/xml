@@ -1,6 +1,10 @@
 # xml Cookbook CHANGELOG
 This file is used to list changes made in each version of the xml cookbook.
 
+## 3.1.1 (2017-01-16)
+
+- Use the right priority to set compile_time attribute
+
 ## 3.1.0 (2016-12-07)
 
 - Move the build essential compile time setting to attributes file
