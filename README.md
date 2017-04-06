@@ -4,6 +4,10 @@
 
 Installs development package for libxml.
 
+## DEPRECATED
+
+nokogiri is now included in Chef so this cookbook has been deprecated. If a more useful purpose can be come up with for the namespace we will gladly revive it
+
 ## Requirements
 
 ### Platforms
