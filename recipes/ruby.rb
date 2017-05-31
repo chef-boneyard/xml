@@ -22,7 +22,7 @@
 execute 'apt-get update' do
   ignore_failure true
   action :nothing
-end.run_action(:run) if 'debian' == node['platform_family']
+end.run_action(:run) if node['platform_family'] == 'debian'
 
 node.default['xml']['compiletime'] = true
 include_recipe 'build-essential::default'
