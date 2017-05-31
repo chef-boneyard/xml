@@ -20,7 +20,7 @@
 default['xml']['compiletime'] = false
 
 case node['platform_family']
-when 'rhel', 'fedora', 'suse'
+when 'rhel', 'fedora', 'suse', 'amazon'
   default['xml']['packages'] = %w(libxml2-devel libxslt-devel zlib-devel)
 when 'debian'
   default['xml']['packages'] = %w(libxml2-dev libxslt-dev zlib1g-dev)
